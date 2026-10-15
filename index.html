@@ -20,7 +20,24 @@
 <meta name="twitter:description" content="Rem Games 独立游戏工作室官方网站">
 <meta name="twitter:image" content="https://remgames.me/assets/og-cover.png">
 <meta name="theme-color" content="#060b1e">
-<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rem Games",
+  "alternateName": "蕾姆工作室",
+  "url": "https://remgames.me/",
+  "logo": "https://remgames.me/assets/logo.png",
+  "email": "xingrem@icloud.com",
+  "description": "Rem Games（蕾姆工作室）是一间以「蕾姆」命名的独立游戏工作室，专注于小而美的独立游戏作品。",
+  "sameAs": ["https://github.com/Alexanderava"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -270,6 +287,8 @@ footer{
 footer .heart{color:var(--rem-blue)}
 footer a{color:var(--text-low);text-decoration:none;transition:color .3s}
 footer a:hover{color:var(--rem-sky)}
+footer .visit{margin-top:10px;font-size:11.5px;opacity:.8;letter-spacing:.15em}
+.sub-hint{margin-top:24px;font-size:12.5px;color:var(--text-low);letter-spacing:.12em}
 
 /* ── 噪点质感 ── */
 .grain{
@@ -402,14 +421,20 @@ footer a:hover{color:var(--rem-sky)}
     <p class="big">如果你也对游戏怀有心意，<br>欢迎来聊一聊 <span class="blue">💙</span></p>
     <div class="contact-btns">
       <a class="btn btn-primary" href="mailto:xingrem@icloud.com">联系我们</a>
+      <a class="btn btn-ghost" href="mailto:xingrem@icloud.com?subject=%E8%AE%A2%E9%98%85%E6%B8%B8%E6%88%8F%E5%8F%91%E5%B8%83%E9%80%9A%E7%9F%A5&body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E8%AE%A2%E9%98%85%20Rem%20Games%20%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%91%E5%B8%83%E9%80%9A%E7%9F%A5%EF%BC%81">订阅发布通知</a>
       <a class="btn btn-ghost" href="https://github.com/Alexanderava" target="_blank" rel="noopener">GitHub</a>
     </div>
+    <p class="sub-hint">首个作品发布时会第一时间通知订阅的你 ✉️</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 <a href="#top">Rem Games</a> · 以心为炉，铸游戏之梦 · Made with <span class="heart">💙</span></p>
+  <p>© 2026 <a href="#top">Rem Games</a> · 蕾姆工作室 · Made with <span class="heart">💙</span></p>
+  <p class="visit">☆ 已有 <span id="busuanzi_value_site_pv">—</span> 次仰望 · <span id="busuanzi_value_site_uv">—</span> 位访客到访</p>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 站点统计：可升级为 Cloudflare Web Analytics（在 CF 控制台 Web Analytics 添加站点后,把 beacon script 粘贴到此处）-->
 
 <script>
 /* ── 星空粒子 ── */
