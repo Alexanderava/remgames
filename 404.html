@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — 页面走丢了 · Rem Games</title>
+<link rel="icon" href="/assets/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night-0:#060b1e;--night-1:#0a1330;
+  --rem-blue:#4f7cff;--rem-sky:#7db4ff;--rem-ice:#bcd9ff;--star-gold:#ffd98a;
+  --text-hi:#eaf1ff;--text-mid:#a8b8d8;--text-low:#6b7a9e;
+  --serif:'Noto Serif SC','Cinzel',serif;
+  --disp:'Cinzel','Noto Serif SC',serif;
+  --sans:'Noto Sans SC',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:radial-gradient(ellipse 90% 60% at 50% 0%,#101c42 0%,var(--night-1) 45%,var(--night-0) 100%);
+  color:var(--text-mid);font-family:var(--sans);font-weight:300;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  overflow:hidden;position:relative;
+}
+.stars{position:fixed;inset:0;pointer-events:none}
+.stars i{
+  position:absolute;display:block;border-radius:50%;
+  background:var(--rem-ice);opacity:.7;
+  animation:tw 3.5s ease-in-out infinite;
+}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.9;transform:scale(1.1)}}
+main{position:relative;z-index:2;padding:40px 24px;max-width:560px}
+.badge{
+  width:96px;height:96px;margin:0 auto 34px;border-radius:24px;
+  box-shadow:0 0 0 1px rgba(125,180,255,.25),0 0 50px rgba(79,124,255,.35);
+  animation:float 5s ease-in-out infinite;
+}
+.badge img{width:100%;height:100%;border-radius:24px;display:block}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+h1{
+  font-family:var(--disp);font-size:clamp(72px,18vw,120px);font-weight:700;
+  color:var(--text-hi);letter-spacing:.08em;line-height:1;
+  text-shadow:0 0 44px rgba(79,124,255,.55);
+}
+h1 .glow{color:var(--rem-sky)}
+h2{
+  font-family:var(--serif);font-weight:900;font-size:clamp(19px,3.6vw,24px);
+  color:var(--rem-ice);margin:26px 0 12px;letter-spacing:.14em;
+}
+p{font-size:14.5px;color:var(--text-low);letter-spacing:.06em;line-height:2}
+.actions{display:flex;gap:16px;justify-content:center;margin-top:42px;flex-wrap:wrap}
+.btn{
+  font-size:13.5px;letter-spacing:.22em;text-decoration:none;
+  padding:13px 34px;border-radius:100px;transition:.35s;
+}
+.btn-primary{
+  color:#fff;background:linear-gradient(120deg,var(--rem-blue),#3a5fd9);
+  box-shadow:0 10px 30px -10px rgba(79,124,255,.65);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px -10px rgba(79,124,255,.85)}
+.btn-ghost{color:var(--rem-ice);border:1px solid rgba(125,180,255,.35)}
+.btn-ghost:hover{border-color:var(--rem-sky);background:rgba(79,124,255,.1);transform:translateY(-3px)}
+footer{
+  position:fixed;bottom:26px;left:0;right:0;text-align:center;
+  font-size:11.5px;color:var(--text-low);letter-spacing:.2em;z-index:2;
+}
+footer a{color:var(--text-low);text-decoration:none}
+footer a:hover{color:var(--rem-sky)}
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<main>
+  <div class="badge"><img src="/assets/logo.png" alt="Rem Games"></div>
+  <h1>4<span class="glow">0</span>4</h1>
+  <h2>这颗星星还没有被点亮</h2>
+  <p>你要找的页面不存在，或者已随星尘飘散。</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="/">回到首页</a>
+    <a class="btn btn-ghost" href="/#games">看看作品</a>
+  </div>
+</main>
+<footer>© 2026 <a href="/">Rem Games</a> · 蕾姆工作室</footer>
+<script>
+const box=document.getElementById('stars');
+for(let i=0;i<70;i++){
+  const s=document.createElement('i');
+  const sz=(Math.random()*2.2+0.6).toFixed(1);
+  s.style.width=sz+'px';s.style.height=sz+'px';
+  s.style.left=(Math.random()*100)+'%';
+  s.style.top=(Math.random()*100)+'%';
+  s.style.animationDelay=(Math.random()*3.5)+'s';
+  s.style.background=Math.random()<0.12?'#ffd98a':'#bcd9ff';
+  box.appendChild(s);
+}
+</script>
+</body>
+</html>
